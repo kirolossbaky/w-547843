@@ -1,0 +1,20 @@
+[project]
+name = "oss-personal-assistant-agent"
+version = "0.1.0"
+description = "Fully open-source personal assistant agent powered by local models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "ddgs>=7.0.0",
+]
+
+[project.scripts]
+assistant-agent = "assistant.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
